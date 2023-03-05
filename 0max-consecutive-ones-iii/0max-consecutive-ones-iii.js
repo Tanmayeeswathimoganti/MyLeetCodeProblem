@@ -20,10 +20,6 @@ var longestOnes = function(nums, k) {
         right++;
     }
     
-    console.log("left", left);
-    console.log("right", right);
-    console.log("zeroCount", zeroCount);
-    
     maxWindowSize = right - left;
     
     while(right < nums.length) {
@@ -43,10 +39,6 @@ var longestOnes = function(nums, k) {
         maxWindowSize = Math.max(maxWindowSize, right - left);
         }
         
-    console.log("left", left);
-    console.log("right", right);
-    console.log("zeroCount", zeroCount);
-    console.log("maxWindowSize", maxWindowSize);
     }
     
     while(zeroCount > k) {
