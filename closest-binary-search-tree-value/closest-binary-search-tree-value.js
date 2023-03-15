@@ -16,9 +16,6 @@ var closestValue = function(root, target) {
     let diff = Math.abs(root.val - target);
     
     let close = (node) => {
-        console.log("node", node);
-        console.log("nodeVal", nodeVal);
-        console.log("diff", diff);
         let temp = Math.abs(node.val - target);
            if(temp < diff) {
                nodeVal = node.val;
