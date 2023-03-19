@@ -11,8 +11,6 @@ var maxAreaOfIsland = function(grid) {
     };
     
     let dfs = (row, col) => {
-        console.log("row & col", row, col);
-        
         for(let [dx, dy] of directions) {
             let nextRow = row + dy, nextCol = col + dx;
             
@@ -22,8 +20,6 @@ var maxAreaOfIsland = function(grid) {
                 dfs(nextRow, nextCol);
             }
         }
-        
-        console.log("temp", temp);
         
         if(temp > maxArea) {
             maxArea = temp;
@@ -42,7 +38,6 @@ var maxAreaOfIsland = function(grid) {
     for(let row = 0; row < rowLength; row++) {
         for(let col = 0; col < colLength; col++) {
             if(grid[row][col] == 1 && !seen[row][col]) {
-                console.log("calling row & col", row, col);
                 temp = 1;
                 seen[row][col] = true;
                 dfs(row, col);
