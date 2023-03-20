@@ -45,9 +45,6 @@ var nearestExit = function(maze, entrance) {
                         nextQueue.push([nextRow, nextCol]);
                     }
                 }else {
-                    console.log("nextRow & nextCol", nextRow, nextCol);
-                    console.log("steps", steps);
-                    
                     if((0 > nextRow || 0 > nextCol || nextRow >= rowLength || nextCol >= colLength) && (row != entrance[0] || col != entrance[1])) {
                         if(steps > 0) {
                             return steps;
