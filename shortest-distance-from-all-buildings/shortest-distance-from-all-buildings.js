@@ -78,11 +78,7 @@ var shortestDistance = function(grid) {
     for(let row = 0; row < rowLength; row++) {
         for(let col = 0; col < colLength; col++) {
             let temp = tracking[row][col];
-            if(temp !== 1 && temp !== 2) {
-                
-                console.log("tracking.length", tracking[row][col].length);
-                console.log("queue.length", queue.length);
-                
+            if(temp !== 1 && temp !== 2) {                
                 if(tracking[row][col].length == queue.length) {
                 let distance = 0;
                 for(let i = 0; i < temp.length; i++) {
